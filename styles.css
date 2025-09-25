@@ -185,6 +185,269 @@ body {
     color: #6a11cb;
 }
 
+/* Product Section Styles */
+.product-section {
+    padding: 60px 5%;
+    background-color: #fff;
+}
+
+.product-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 50px;
+}
+
+.product-image-section {
+    flex: 1;
+}
+
+.main-image {
+    width: 100%;
+    height: 750px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.color-options {
+    margin-top: 20px;
+}
+
+.color-options h3 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.color-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.color-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.color-btn.active {
+    border-color: #2575fc;
+    background-color: #f0f7ff;
+}
+
+.color-sample {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.blue {
+    background-color: #2575fc;
+}
+
+.black {
+    background-color: #333;
+}
+
+.red {
+    background-color: #ff4757;
+}
+
+.green {
+    background-color: #2ed573;
+}
+
+.product-details {
+    flex: 1;
+}
+
+.product-title h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.current-price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2575fc;
+}
+
+.original-price {
+    font-size: 1.2rem;
+    text-decoration: line-through;
+    color: #999;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.stars {
+    display: flex;
+}
+
+.star {
+    color: #ddd;
+    font-size: 1.2rem;
+}
+
+.star.filled {
+    color: #ffc107;
+}
+
+.rating-text {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.description {
+    margin-bottom: 25px;
+}
+
+.description p {
+    margin-bottom: 20px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkmark {
+    color: #2ed573;
+    font-weight: bold;
+}
+
+.add-to-cart {
+    margin: 30px 0;
+}
+
+.cart-btn {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 100%;
+}
+
+.cart-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(37, 117, 252, 0.3);
+}
+
+.payment-methods {
+    margin: 30px 0;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.payment-methods h3 {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.payment-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.payment-icon {
+    padding: 8px 15px;
+    background: #f5f5f5;
+    border-radius: 5px;
+    font-weight: 600;
+    color: #555;
+}
+
+.faq-section {
+    margin-top: 30px;
+}
+
+.faq-section h3 {
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.faq-item {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.faq-toggle {
+    font-size: 1.2rem;
+    transition: transform 0.3s;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.faq-answer p {
+    padding: 0 0 15px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.faq-item.active .faq-toggle {
+    transform: rotate(45deg);
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+}
 /* Mobile responsiveness */
 @media (max-width: 768px) {
     .navbar {
