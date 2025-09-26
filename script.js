@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Star rating interaction (optional enhancement)
     const stars = document.querySelectorAll('.star');
-    
+        
     stars.forEach((star, index) => {
         star.addEventListener('click', function() {
             // Reset all stars
@@ -79,51 +79,5 @@ document.addEventListener('DOMContentLoaded', function() {
             const ratingCount = document.querySelector('.rating-text');
             ratingCount.textContent = `(${index + 1}/5 rating submitted)`;
         });
-    });
-});
-document.addEventListener('DOMContentLoaded', function() {
-    // Info section button interactions
-    const infoButtons = document.querySelectorAll('.info-btn');
-    
-    infoButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Add a simple animation
-            this.style.transform = 'scale(0.95)';
-            setTimeout(() => {
-                this.style.transform = '';
-            }, 200);
-            
-            // In a real application, this would navigate to the appropriate page
-            if (this.textContent.includes('Learn More')) {
-                console.log('Navigating to solutions page');
-            } else {
-                console.log('Navigating to product page');
-            }
-        });
-    });
-    
-    // Optional: Add scroll animations for the info section
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, observerOptions);
-    
-    // Observe info section elements for scroll animations
-    const infoElements = document.querySelectorAll('.info-row');
-    infoElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
     });
 });
