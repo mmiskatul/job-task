@@ -1247,6 +1247,407 @@ body {
     font-size: 0.8rem;
     font-weight: 600;
 }
+/* Backed by Science Section Styles */
+.science-section {
+    padding: 80px 5%;
+    background: linear-gradient(135deg, #fff9f0 0%, #ffffff 100%);
+}
+
+.science-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Science Content - Two Column Layout */
+.science-content {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+/* Left Side - Text Content */
+.science-text {
+    flex: 1;
+}
+
+.science-text h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.science-text > p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* Science Stats */
+.science-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-3px);
+}
+
+.stat-icon {
+    font-size: 3rem;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.stat-info h3 {
+    font-size: 1.5rem;
+    color: #FE9900;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.stat-info p {
+    color: #666;
+    line-height: 1.5;
+    font-size: 1.1rem;
+}
+
+/* Science Features */
+.science-features {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.feature .checkmark {
+    color: #2ed573;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* Science Button */
+.science-btn {
+    background: #FE9900;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.science-btn:hover {
+    background: #e68900;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(254, 153, 0, 0.3);
+}
+
+/* Right Side - Image */
+.science-image {
+    flex: 1;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.science-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    padding: 40px;
+    color: white;
+}
+
+.overlay-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #FE9900;
+}
+
+.overlay-content p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Science Metrics */
+.science-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.metric-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    border-top: 4px solid #FE9900;
+}
+
+.metric-card:hover {
+    transform: translateY(-5px);
+}
+
+.metric-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #FE9900;
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.metric-label {
+    font-size: 1.1rem;
+    color: #666;
+    font-weight: 500;
+}
+/* FAQ Section Styles */
+.faq-main-section {
+    padding: 80px 5%;
+    background: #fff;
+}
+
+.faq-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.faq-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.faq-header h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.faq-header p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* FAQ Content - Two Column Layout */
+.faq-content {
+    display: flex;
+    gap: 60px;
+    margin-bottom: 60px;
+}
+
+/* Left Column - Main Question */
+.faq-main-question {
+    flex: 1;
+    background: #fff9f0;
+    border-radius: 20px;
+    padding: 40px;
+    border-left: 5px solid #FE9900;
+}
+
+.main-question-header h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.main-question-answer p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.question-subsection {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 30px;
+    border: 1px solid #e9ecef;
+}
+
+.question-subsection h4 {
+    font-size: 1.3rem;
+    color: #FE9900;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.question-subsection p {
+    margin-bottom: 0;
+    color: #555;
+}
+
+/* Right Column - FAQ List */
+.faq-list {
+    flex: 1;
+}
+
+.faq-item {
+    background: white;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #e9ecef;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    border-color: #FE9900;
+    box-shadow: 0 5px 15px rgba(254, 153, 0, 0.1);
+}
+
+.faq-item.active {
+    border-color: #FE9900;
+    box-shadow: 0 5px 20px rgba(254, 153, 0, 0.15);
+}
+
+.faq-question {
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #fff9f0;
+}
+
+.faq-question h4 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0;
+    font-weight: 600;
+    flex: 1;
+}
+
+.faq-toggle {
+    font-size: 1.5rem;
+    color: #FE9900;
+    font-weight: bold;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-toggle {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background: #f8f9fa;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+}
+
+.faq-answer p {
+    padding: 0 25px 25px;
+    margin: 0;
+    color: #666;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* FAQ CTA */
+.faq-cta {
+    background: linear-gradient(135deg, #FE9900 0%, #ffb84d 100%);
+    border-radius: 20px;
+    padding: 60px;
+    text-align: center;
+    color: white;
+}
+
+.cta-content h3 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    line-height: 1.3;
+}
+
+.faq-order-btn {
+    background: white;
+    color: #FE9900;
+    border: none;
+    padding: 18px 50px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.faq-order-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+}
+
+.faq-order-btn::after {
+    content: '→';
+    font-size: 1.3rem;
+    transition: transform 0.3s ease;
+}
+
+.faq-order-btn:hover::after {
+    transform: translateX(5px);
+}
 
 
 /* Mobile responsiveness */
@@ -1468,6 +1869,88 @@ body {
     .customer-details {
         text-align: center;
     }
+     .science-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .science-text h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .science-text > p {
+        text-align: center;
+        font-size: 1.1rem;
+    }
+    
+    .stat-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+    
+    .stat-icon {
+        font-size: 2.5rem;
+        width: 60px;
+        height: 60px;
+    }
+    
+    .science-features {
+        align-items: center;
+    }
+    
+    .science-image img {
+        height: 350px;
+    }
+    
+    .image-overlay {
+        padding: 30px 20px;
+    }
+    
+    .science-metrics {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .metric-card {
+        padding: 30px 20px;
+    }
+    
+    .metric-number {
+        font-size: 2.5rem;
+    }
+    .faq-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .faq-header h2 {
+        font-size: 2rem;
+    }
+    
+    .faq-main-question {
+        padding: 30px 25px;
+    }
+    
+    .main-question-header h3 {
+        font-size: 1.6rem;
+    }
+    
+    .faq-cta {
+        padding: 40px 25px;
+    }
+    
+    .cta-content h3 {
+        font-size: 1.8rem;
+    }
+    
+    .faq-order-btn {
+        padding: 15px 40px;
+        font-size: 1.1rem;
+        width: 100%;
+        justify-content: center;
+    }
     
     
 }
@@ -1592,6 +2075,66 @@ body {
         padding: 12px 30px;
         font-size: 1rem;
     }
+    .science-section {
+        padding: 60px 5%;
+    }
+    
+    .science-text h2 {
+        font-size: 1.8rem;
+    }
+    
+    .stat-info h3 {
+        font-size: 1.3rem;
+    }
+    
+    .science-image img {
+        height: 300px;
+    }
+    
+    .science-metrics {
+        grid-template-columns: 1fr;
+    }
+    
+    .metric-number {
+        font-size: 2.2rem;
+    }
+    
+    .science-btn {
+        width: 100%;
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+    .faq-main-section {
+        padding: 60px 5%;
+    }
+    
+    .faq-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .faq-main-question {
+        padding: 25px 20px;
+    }
+    
+    .main-question-header h3 {
+        font-size: 1.4rem;
+    }
+    
+    .faq-question {
+        padding: 20px;
+    }
+    
+    .faq-question h4 {
+        font-size: 1.1rem;
+    }
+    
+    .faq-cta {
+        padding: 30px 20px;
+    }
+    
+    .cta-content h3 {
+        font-size: 1.5rem;
+    }
     
 }
 /* Animation for comparison items */
@@ -1641,3 +2184,73 @@ body {
 .feedback-card:nth-child(4) { animation-delay: 0.4s; }
 .feedback-card:nth-child(5) { animation-delay: 0.5s; }
 .feedback-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* Animation for Science Section */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.science-text {
+    animation: fadeInLeft 0.8s ease forwards;
+}
+
+.science-image {
+    animation: fadeInRight 0.8s ease forwards;
+}
+
+.metric-card {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+.metric-card:nth-child(1) { animation-delay: 0.1s; }
+.metric-card:nth-child(2) { animation-delay: 0.2s; }
+.metric-card:nth-child(3) { animation-delay: 0.3s; }
+.metric-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Animation for FAQ Section */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.faq-main-question {
+    animation: slideInUp 0.6s ease forwards;
+}
+
+.faq-item {
+    animation: slideInUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+.faq-item:nth-child(1) { animation-delay: 0.1s; }
+.faq-item:nth-child(2) { animation-delay: 0.2s; }
+.faq-item:nth-child(3) { animation-delay: 0.3s; }
+.faq-item:nth-child(4) { animation-delay: 0.4s; }
+.faq-item:nth-child(5) { animation-delay: 0.5s; }
+.faq-item:nth-child(6) { animation-delay: 0.6s; }
+.faq-item:nth-child(7) { animation-delay: 0.7s; }
