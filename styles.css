@@ -31,7 +31,7 @@ body {
 .logo-icon {
     width: 40px;
     height: 40px;
-    background: linear-gradient(135deg, #FE9900);
+    background: #FE9900;
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -65,7 +65,7 @@ body {
 }
 
 .nav-links a:hover {
-    color: #2575fc;
+    color: #FE9900;
 }
 
 .nav-links a::after {
@@ -75,7 +75,7 @@ body {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #2575fc;
+    background-color: #FE9900;
     transition: width 0.3s;
 }
 
@@ -84,7 +84,7 @@ body {
 }
 
 .nav-button {
-    background: linear-gradient(135deg, #FE9900);
+    background: #FE9900;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -97,7 +97,7 @@ body {
 
 .nav-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(37, 117, 252, 0.3);
+    box-shadow: 0 4px 8px rgba(254, 153, 0, 0.3);
 }
 
 /* Hero Section Styles */
@@ -122,16 +122,18 @@ body {
     font-size: 3.5rem;
     margin-bottom: 20px;
     line-height: 1.2;
+    color: #333;
 }
 
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 30px;
     opacity: 0.9;
+    color: #555;
 }
 
 .hero-button {
-    background: linear-gradient(135deg, #FE9900);
+    background: #FE9900;
     color: white;
     border: none;
     padding: 12px 30px;
@@ -139,11 +141,12 @@ body {
     font-weight: 600;
     cursor: pointer;
     font-size: 1rem;
-    transition: transform 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .hero-button:hover {
     transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(254, 153, 0, 0.3);
 }
 
 .customers {
@@ -167,22 +170,28 @@ body {
     align-items: center;
     justify-content: center;
     margin-left: -10px;
-    color: #2575fc;
-    font-weight: bold;
+    overflow: hidden;
 }
 
 .customer-icon:first-child {
     margin-left: 0;
 }
 
+.customer-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .customer-text {
     font-size: 1rem;
     font-weight: 500;
+    color: #333;
 }
 
 .customer-text span {
     font-weight: 700;
-    color: #6a11cb;
+    color: #FE9900;
 }
 
 /* Product Section Styles */
@@ -244,31 +253,14 @@ body {
 }
 
 .color-btn.active {
-    border-color: #2575fc;
-    background-color: #f0f7ff;
+    border-color: #FE9900;
+    background-color: #fff9f0;
 }
 
-.color-sample {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    display: inline-block;
-}
-
-.blue {
-    background-color: #2575fc;
-}
-
-.black {
-    background-color: #333;
-}
-
-.red {
-    background-color: #ff4757;
-}
-
-.green {
-    background-color: #2ed573;
+.color-btn img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
 }
 
 .product-details {
@@ -291,7 +283,7 @@ body {
 .current-price {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #2575fc;
+    color: #FE9900;
 }
 
 .original-price {
@@ -348,8 +340,9 @@ body {
 }
 
 .checkmark {
-    color: #2ed573;
+    color: #FE9900;
     font-weight: bold;
+    font-size: 1.2rem;
 }
 
 .add-to-cart {
@@ -357,11 +350,11 @@ body {
 }
 
 .cart-btn {
-    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    background: #FE9900;
     color: white;
     border: none;
     padding: 15px 30px;
-    border-radius: 5px;
+    border-radius: 25px;
     font-weight: 600;
     cursor: pointer;
     font-size: 1.1rem;
@@ -371,7 +364,7 @@ body {
 
 .cart-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(37, 117, 252, 0.3);
+    box-shadow: 0 4px 8px rgba(254, 153, 0, 0.3);
 }
 
 .payment-methods {
@@ -390,14 +383,21 @@ body {
 .payment-icons {
     display: flex;
     gap: 15px;
+    flex-wrap: wrap;
 }
 
 .payment-icon {
     padding: 8px 15px;
     background: #f5f5f5;
     border-radius: 5px;
-    font-weight: 600;
-    color: #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.payment-icon img {
+    height: 20px;
+    object-fit: contain;
 }
 
 .faq-section {
@@ -422,11 +422,13 @@ body {
     padding: 15px 0;
     cursor: pointer;
     font-weight: 500;
+    color: #333;
 }
 
 .faq-toggle {
     font-size: 1.2rem;
     transition: transform 0.3s;
+    color: #FE9900;
 }
 
 .faq-answer {
@@ -448,6 +450,106 @@ body {
 .faq-item.active .faq-answer {
     max-height: 200px;
 }
+
+/* Problem and Solution Section Styles */
+.info-section {
+    padding: 80px 5%;
+    background-color: #f8f9fa;
+}
+
+.screen-h {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.info-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.info-row {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 80px;
+}
+
+.info-row:last-child {
+    margin-bottom: 0;
+}
+
+.info-row.reversed {
+    flex-direction: row-reverse;
+}
+
+.info-image {
+    flex: 1;
+}
+
+.info-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.info-content {
+    flex: 1;
+}
+
+.info-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #333;
+    line-height: 1.3;
+}
+
+.info-content p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.info-content ul {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.info-content li {
+    margin-bottom: 10px;
+    color: #555;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 10px;
+}
+
+.info-content li::before {
+    content: "•";
+    color: #FE9900;
+    font-weight: bold;
+    position: absolute;
+    left: -10px;
+}
+
+.info-btn {
+    background: #FE9900;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 20px;
+}
+
+.info-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(254, 153, 0, 0.3);
+}
+
 /* Mobile responsiveness */
 @media (max-width: 768px) {
     .navbar {
@@ -477,5 +579,63 @@ body {
     
     .customers {
         justify-content: center;
+    }
+    
+    .product-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .main-image {
+        height: 400px;
+    }
+    
+    .color-buttons {
+        flex-wrap: wrap;
+    }
+    
+    .info-row {
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 60px;
+    }
+    
+    .info-row.reversed {
+        flex-direction: column;
+    }
+    
+    .info-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .screen-h {
+        min-height: auto;
+        padding: 60px 5%;
+    }
+    
+    .payment-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .product-title h1 {
+        font-size: 2rem;
+    }
+    
+    .info-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .nav-links {
+        gap: 10px;
+    }
+    
+    .nav-links a {
+        font-size: 14px;
     }
 }
