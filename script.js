@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Star rating interaction (optional enhancement)
     const stars = document.querySelectorAll('.star');
-        
+
     stars.forEach((star, index) => {
         star.addEventListener('click', function() {
             // Reset all stars
@@ -80,4 +80,127 @@ document.addEventListener('DOMContentLoaded', function() {
             ratingCount.textContent = `(${index + 1}/5 rating submitted)`;
         });
     });
+});
+
+// Slider functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize slider
+    const sliderTrack = document.getElementById('slider-track');
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const sliderDots = document.getElementById('slider-dots');
+    
+    let currentSlide = 0;
+    const totalSlides = slides.length;
+    
+    // Create dots
+    function createDots() {
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('div');
+            dot.classList.add('slider-dot');
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(i));
+            sliderDots.appendChild(dot);
+        }
+    }
+    
+    // Update dots
+    function updateDots() {
+        const dots = document.querySelectorAll('.slider-dot');
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentSlide);
+        });
+    }
+    
+    // Go to specific slide
+    function goToSlide(slideIndex) {
+        currentSlide = slideIndex;
+        if (currentSlide >= totalSlides) currentSlide = 0;
+        if (currentSlide < 0) currentSlide = totalSlides - 1;
+        
+        sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+        updateDots();
+        updateButtons();
+    }
+    
+    // Update button states
+    function updateButtons() {
+        prevBtn.disabled = currentSlide === 0;
+        nextBtn.disabled = currentSlide === totalSlides - 1;
+    }
+    
+    // Next slide
+    function nextSlide() {
+        goToSlide(currentSlide + 1);
+    }
+    
+    // Previous slide
+    function prevSlide() {
+        goToSlide(currentSlide - 1);
+    }
+    
+    // Auto slide (optional)
+    let autoSlideInterval;
+    
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+    }
+    
+    function stopAutoSlide() {
+        clearInterval(autoSlideInterval);
+    }
+    
+    // Initialize slider
+    function initSlider() {
+        createDots();
+        updateButtons();
+        
+        // Event listeners
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+        
+        // Pause auto-slide on hover
+        sliderTrack.addEventListener('mouseenter', stopAutoSlide);
+        sliderTrack.addEventListener('mouseleave', startAutoSlide);
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') prevSlide();
+            if (e.key === 'ArrowRight') nextSlide();
+        });
+        
+        // Start auto-slide
+        startAutoSlide();
+    }
+    
+    // Initialize the slider
+    initSlider();
+    
+    // Touch/swipe support for mobile
+    let startX = 0;
+    let endX = 0;
+    
+    sliderTrack.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        stopAutoSlide();
+    });
+    
+    sliderTrack.addEventListener('touchend', (e) => {
+        endX = e.changedTouches[0].clientX;
+        handleSwipe();
+        startAutoSlide();
+    });
+    
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        
+        if (startX - endX > swipeThreshold) {
+            // Swipe left - next slide
+            nextSlide();
+        } else if (endX - startX > swipeThreshold) {
+            // Swipe right - previous slide
+            prevSlide();
+        }
+    }
 });
